@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Show</title>
+    <script src="{{ url_for('static', filename='js/poker.min.js') }}"></script>
 </head>
 <body>
+<canvas id="brainCard" width="1280" height="720"></canvas>
+<script>
+    var canvas = document.getElementById('brainCard').getContext('2d');
+    canvas.drawPokerCard(10, 10, 120, 'hearts', 'A');
+    canvas.drawPokerCard(130, 10, 120, 'hearts', '2');
+    canvas.drawPokerCard(250, 10, 120, 'hearts', '3');
+    canvas.drawPokerCard(370, 10, 120, 'hearts', '4');
 
+    canvas.drawPokerCard(10, 130, 120, 'hearts', '5');
+    canvas.drawPokerCard(130, 130, 120, 'hearts', '6');
+    canvas.drawPokerCard(250, 130, 120, 'hearts', '7');
+    canvas.drawPokerCard(370, 130, 120, 'hearts', '8');
+
+</script>
 </body>
 </html>
