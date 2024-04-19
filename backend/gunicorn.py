@@ -63,7 +63,7 @@ loglevel = 'info'
 
 access_log_format = '%(t)s %(p)s %(h)s "%(r)s" %(s)s %(L)s %(b)s %(f)s" "%(a)s"'
 # 设置pid文件的文件名，如果不设置将不会创建pid文件
-pidfile = "logs/gunicorn.pid"
+pidfile = "logs/gunicorn/gunicorn.pid"
 # 要写入的访问日志目录
 accesslog = "logs/gunicorn/access.log"
 # 要写入错误日志的文件目录
