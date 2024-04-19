@@ -233,7 +233,7 @@ function remainMove(data, initImageData) {
     // let remainImageData=remaDataAll.map((el) => el['id']).map(id => initImageData[id]);
     let remainImageData = {};
     remaDataAll.map((el) => el['id']).map(id => remainImageData[id] = initImageData[id]);
-    let backgroundImageSrc = '/static/img/b.svg';
+    let backgroundImageSrc = '/static/img/poker-qr/1B.svg';
     let backgroundImageData = {};
     Konva.Image.fromURL(backgroundImageSrc, (imageNode) => {
         Object.keys(remainImageData).forEach(function (key, idx) {
@@ -402,8 +402,8 @@ function show(data) {
     // 初始化
     let initImageData = {};
     initData.forEach((el, idx, arr) => {
-        let imageName = String(el['type'][0]).toLowerCase() + '_' + String(el['rank']).toLowerCase();
-        let imageSrc = '/static/img/' + imageName + '.svg';
+        let imageName = String(el['rank']).toUpperCase()+String(el['type'][0]).toUpperCase()  ;
+        let imageSrc = '/static/img/poker-qr/' + imageName + '.svg';
         Konva.Image.fromURL(imageSrc, (imageNode) => {
             initImageData[el['id']] = imageNode;
             let x_idx = Math.floor(idx / row);

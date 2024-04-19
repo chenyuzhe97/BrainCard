@@ -4,7 +4,7 @@ import os
 # gevent.monkey.patch_all()
 
 # 绑定ip和端口号
-bind = '0.0.0.0:8000'
+bind = '0.0.0.0:8080'
 # 监听队列
 backlog = 512
 # gunicorn要切换到的目的工作目录
