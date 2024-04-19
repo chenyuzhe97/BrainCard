@@ -1,1 +1,4 @@
 .idea
+backend/.env
+backend/.pdm-python
+web/

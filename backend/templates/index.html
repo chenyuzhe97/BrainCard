@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brain Card Show</title>
+    <link href="{{ url_for('static', filename='css/form.css') }}">
+{#    <script src="https://unpkg.com/konva@9/konva.min.js"></script>#}
+    <script src="https://cdn.bootcdn.net/ajax/libs/konva/8.4.3/konva.min.js"></script>
+</head>
+<body>
+<div id="brainCard">
+    <div id="brainCardForm">
+        <form method="post" class="basic-grey" onsubmit="return submitBrainCardForm(this)">
+            <h1>Submit Form
+                <span>Please fill all the texts in the fields.</span>
+            </h1>
+            <label>
+                <span>Chip Id :</span>
+                <input type="number" name="chipId" placeholder=""/>
+            </label>
+            <label>
+                <span>Random Seed :</span>
+                <input type="number" name="randomSeed" placeholder=""/>
+            </label>
+            <label>
+                <span>Game Category :</span>
+                <input type="number" name="gameCategory" placeholder=""/>
+            </label>
+
+            <label>
+                <span>&nbsp;</span>
+                <input type="submit" class="button" value="Submit"/>
+            </label>
+        </form>
+    </div>
+    <div id="brainCardCanvas"></div>
+</div>
+<script src="{{ url_for('static', filename='js/card.js') }}"></script>
+</body>
+</html>
